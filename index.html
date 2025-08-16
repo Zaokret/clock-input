@@ -1528,7 +1528,9 @@ const slider = document.getElementById('slider');
   }
 
   function onMouseDown(e) {
-    e.preventDefault();
+    if("preventDefault" in e) {
+      e.preventDefault();
+    }
     isDragging = true;
     lastAngle = getAngleFromCenter(e.clientX, e.clientY);
   }
