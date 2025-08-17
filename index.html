@@ -46,6 +46,10 @@
       font-size: 40px;
       line-height: 1.4;
     }
+
+    html, body {
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -1617,7 +1621,7 @@
           if (e.touches.length > 0) {
             onMouseMove(e.touches[0]);
           }
-        });
+        }, {passive: true});
         window.addEventListener('touchend', onMouseUp);
 
         updateHandle();
