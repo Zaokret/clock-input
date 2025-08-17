@@ -1603,7 +1603,7 @@
 
         sunriseMinutes = sunriseDate.getHours() * 60 + sunriseDate.getMinutes();
         sunsetMinutes = sunsetDate.getHours() * 60 + sunsetDate.getMinutes();
-        gradients = remapDay(baselineGradients, data.results, 120)
+        gradients = remapDay(baselineGradients, data.results, 0)
 
         const startDrag = (e) => {
           const point = e.touches ? e.touches[0] : e;
